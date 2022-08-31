@@ -2,7 +2,8 @@ import { PATH } from "../../../constants/paths";
 import { LoginActionTypes } from "../action-types";
 import axios from "axios";
 
-const { loginRequesing, loginFail, resetLogin } = LoginActionTypes;
+const { loginSuccess, loginRequesing, loginFail, resetLogin } =
+  LoginActionTypes;
 
 export const login = (email, password) => {
   return async (dispatch) => {
@@ -24,6 +25,7 @@ export const login = (email, password) => {
         const accessToken = res.data.access_token;
         const bearerToken = `Bearer ${accessToken}`;
         axios.defaults.headers.common.Authorization = bearerToken;
+        dispatch(loginSuccess());
       })
       .catch((e) => {
         let errorMessage = "";

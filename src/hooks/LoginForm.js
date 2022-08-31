@@ -23,7 +23,6 @@ function useLoginForm() {
 
   const onSubmit = useCallback((formValues) => {
     login(formValues.email, formValues.password);
-    console.log(formValues.email);
   }, []);
 
   return {

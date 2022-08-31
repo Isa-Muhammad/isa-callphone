@@ -9,9 +9,8 @@ export const loginRequesing = () => ({
   type: LoginActionConstants.LOGIN_REQUESTING,
 });
 
-export const loginSuccess = (user) => ({
+export const loginSuccess = () => ({
   type: LoginActionConstants.LOGIN_SUCCESS,
-  user,
 });
 
 export const loginFail = (error) => ({

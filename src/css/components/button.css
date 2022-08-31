@@ -23,7 +23,7 @@ button.medium-text {
 }
 
 .button.secondary {
-  @apply bg-blue-300 text-white;
+  @apply bg-white text-airggate-pri;
 }
 
 .button.secondary-stroke {

@@ -9,13 +9,13 @@
 } */
 
 .auth-card {
-  @apply w-[34.635rem] h-[34.375rem];
+  @apply w-[25rem] h-full lg:w-[34.635rem] lg:h-[34.375rem];
   @apply flex flex-col;
   @apply p-[5rem];
 }
 
 .auth-card-footer {
-  @apply flex justify-between;
+  @apply flex flex-col lg:flex-row items-center justify-between;
   /* @apply text-center; */
 }
 
