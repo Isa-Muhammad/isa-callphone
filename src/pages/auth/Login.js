@@ -6,6 +6,7 @@ import { Input, Button } from "../../components/form";
 import useLoginForm from "../../hooks/LoginForm";
 import { Link } from "react-router-dom";
 import classNames from "classnames";
+import { login } from "../../store/index";
 
 const Login = () => {
   const { register, onSubmit, errors, isValid } = useLoginForm();
