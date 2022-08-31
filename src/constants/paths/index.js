@@ -1,3 +1,3 @@
 export const PATH = {
-  auth: "api/auth/login",
+  auth: "https://adminstaging.airgate.ng/index.php/api/auth/login",
 };

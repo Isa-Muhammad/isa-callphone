@@ -10,8 +10,8 @@ export const login = (email, password) => {
     dispatch(loginRequesing());
 
     const requestPayload = {
-      username: email,
-      password,
+      email: email,
+      password: password,
     };
 
     const timeout = {

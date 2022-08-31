@@ -2,11 +2,11 @@ import { useCallback } from "react";
 
 import { yupResolver } from "@hookform/resolvers/yup";
 import { useForm } from "react-hook-form";
-// import { useDispatch } from "react-redux";
-// import { bindActionCreators } from "redux";
+import { useDispatch } from "react-redux";
+import { bindActionCreators } from "redux";
 
 import { LoginSchema } from "../schema/LoginSchema";
-// import { loginActionCreators } from "../store";
+import { loginActionCreators } from "../store";
 
 function useLoginForm() {
   const {
@@ -18,11 +18,12 @@ function useLoginForm() {
     resolver: yupResolver(LoginSchema),
   });
 
-  // const dispatch = useDispatch();
-  // const { login } = bindActionCreators(loginActionCreators, dispatch);
+  const dispatch = useDispatch();
+  const { login } = bindActionCreators(loginActionCreators, dispatch);
 
   const onSubmit = useCallback((formValues) => {
-    // login(formValues);
+    login(formValues.email, formValues.password);
+    console.log(formValues.email);
   }, []);
 
   return {

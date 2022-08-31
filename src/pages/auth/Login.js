@@ -6,11 +6,16 @@ import { Input, Button } from "../../components/form";
 import useLoginForm from "../../hooks/LoginForm";
 import { Link } from "react-router-dom";
 import classNames from "classnames";
-import { login } from "../../store/index";
+import { useSelector } from "react-redux";
 
 const Login = () => {
   const { register, onSubmit, errors, isValid } = useLoginForm();
   const [showPassword, setShowPassword] = useState(false);
+
+  // let loginReducer = useSelector((state) => state.loginReducer);
+  // let loginRequesting = loginReducer?.loginRequesting;
+
+  const { loginRequesting, error } = useSelector((state) => state.loginReducer);
 
   const toggleClass = (hasError) =>
     classNames("input", { "input-error": hasError });
