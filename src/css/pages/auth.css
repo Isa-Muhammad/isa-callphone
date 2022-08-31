@@ -1,0 +1,24 @@
+.auth-section {
+  @apply flex flex-col;
+  @apply mt-32;
+  @apply items-center;
+}
+
+/* .auth-card {
+  @apply lg:max-w-lg w-full;
+} */
+
+.auth-card {
+  @apply w-[34.635rem] h-[34.375rem];
+  @apply flex flex-col;
+  @apply p-[5rem];
+}
+
+.auth-card-footer {
+  @apply flex justify-between;
+  /* @apply text-center; */
+}
+
+.auth-card-links {
+  @apply text-sm font-semibold;
+}

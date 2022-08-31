@@ -2,7 +2,11 @@
 module.exports = {
   content: ["./src/**/*.{html,js}"],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        "airggate-pri": "#4834D4",
+      },
+    },
   },
   plugins: [],
 };

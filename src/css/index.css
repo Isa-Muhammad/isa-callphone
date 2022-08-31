@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import "./components/card.css";
+@import "./layout/main.css";
+@import "./pages/auth.css";
+@import "./components/form.css";
+@import "./components/spinner.css";
+@import "./components/button.css";
+
+body {
+  background: linear-gradient(88.41deg, #130f40 28.44%, #130f40 76.69%),
+    url(../assets/ellipses.svg) no-repeat;
+  background-blend-mode: lighten;
+  background-size: cover;
+
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Rubik", "Segoe UI", "Roboto",
+    "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
