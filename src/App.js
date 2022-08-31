@@ -1,8 +1,10 @@
+import Routes from "./routes";
+
 function App() {
   return (
-    <div className="App">
-      <p className="text-blue-500">Callphone</p>
-    </div>
+    <>
+      <Routes status={false} />
+    </>
   );
 }
 
