@@ -22,10 +22,13 @@ export const login = (email, password) => {
     axios
       .post(PATH.auth, requestPayload, timeout)
       .then((res) => {
-        const accessToken = res.data.access_token;
+        const accessToken = res.data.data.access_token;
         const bearerToken = `Bearer ${accessToken}`;
+        const details = res.data.data.user;
         axios.defaults.headers.common.Authorization = bearerToken;
         dispatch(loginSuccess());
+        localStorage.setItem("details", JSON.stringify(details));
+        localStorage.setItem("access token", JSON.stringify(accessToken));
       })
       .catch((e) => {
         let errorMessage = "";
